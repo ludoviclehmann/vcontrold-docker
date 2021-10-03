@@ -1,0 +1,14 @@
+version: 1.0.{build}
+image:
+- Ubuntu
+
+install:
+- sh: sudo apt-get update && sudo apt-get install -y qemu binfmt-support qemu-user-static # Install the qemu packages
+#environment:
+#  matrix:
+#    - ARCH: armhf
+#    - ARCH: arm64
+#    - ARCH: amd64
+
+build_script:
+  - sh: bash ./build.sh
